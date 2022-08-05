@@ -1,0 +1,122 @@
+@import-normalize;
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root {
+  --BrightBlue: hsl(220, 98%, 61%);
+}
+
+.lightTheme {
+  --background-color: #f3f3f5;
+  --textColor: hsl(235, 19%, 35%);
+  --textColorSecondary: hsl(236, 9%, 61%);
+  --textColorActive: hsl(220, 98%, 61%);
+  --textColorHover: var(--textColor);
+  --colorTask: #fff;
+  --line: hsl(236, 33%, 92%);
+
+  --colorShadow: rgba(229, 228, 234, 1);
+}
+.darkTheme {
+  --background-color: hsl(240, 20%, 12%);
+  --textColor: hsl(234, 39%, 85%);
+  --textColorSecondary: rgb(119, 122, 146);
+  --textColorActive: hsl(220, 98%, 61%);
+  --textColorHover: hsl(236, 33%, 92%);
+  --colorTask: hsl(235, 24%, 19%);
+  --line: hsl(237, 14%, 26%);
+
+  --colorShadow: rgba(14, 14, 22, 1);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 18px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--background-color);
+  color: var(--textColor);
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+  @media (max-width: 590px) {
+    font-size: 13px;
+  }
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+#root {
+  height: 100%;
+}

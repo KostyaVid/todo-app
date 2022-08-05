@@ -1,0 +1,126 @@
+.task {
+  width: 100%;
+  max-width: 540px;
+  background-color: var(--colorTask);
+  z-index: 2;
+  height: 65px;
+  padding: 20px 24px;
+  border-bottom: 1px var(--line) solid;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  position: relative;
+  cursor: pointer;
+  @media (max-width: 590px) {
+    height: 52px;
+    padding: 15px 20px;
+    border-bottom: 1px var(--line) solid;
+  }
+}
+
+.animDrag {
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(119, 122, 146, 0.4) inset;
+  -moz-box-shadow: 0px 0px 8px 0px rgba(119, 122, 146, 0.4) inset;
+  box-shadow: 0px 0px 8px 0px rgba(119, 122, 146, 0.4) inset;
+}
+
+.taskContent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  border-radius: 5px;
+}
+
+.check {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+}
+
+.completeCheck {
+  border: none;
+  background: rgb(87, 221, 255);
+  background: linear-gradient(129deg, rgba(87, 221, 255, 1) 0%, rgba(192, 88, 243, 1) 100%);
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 9px;
+    background-image: url(./../../../public/images/icon-check.svg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.nameTask {
+  flex: 1 0 0;
+  margin: 0 20px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  @media (max-width: 590px) {
+    margin: 0 10px;
+  }
+}
+
+.completeText {
+  text-decoration: line-through;
+  color: var(--line);
+}
+
+.deleteIcon {
+  flex: 0 0 1;
+  background-color: inherit;
+  visibility: hidden;
+  img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (max-width: 590px) {
+    visibility: visible;
+  }
+}
+
+@media (min-width: 591px) {
+  .task:hover .deleteIcon {
+    visibility: visible;
+  }
+}
+
+.animTaskRemove {
+  animation-name: scaleTaskRemove;
+}
+
+@keyframes scaleTaskRemove {
+  from {
+    height: 65px;
+    padding: 20px 24px;
+    border-bottom: 1px var(--line) solid;
+  }
+  to {
+    height: 0px;
+    padding: 0px 24px;
+    border-bottom: none;
+  }
+}
+
+.animTaskRemoveContent {
+  display: none;
+}
+
+.dragActive {
+  display: none;
+}

@@ -1,0 +1,14 @@
+.main {
+  flex: 1 0 auto;
+  margin-top: -145px;
+  position: relative;
+  @media (max-width: 590px) {
+    margin-top: -92px;
+  }
+}
+
+.renderTasks article:first-of-type {
+  display: flex;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}

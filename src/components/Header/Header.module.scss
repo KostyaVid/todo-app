@@ -1,0 +1,67 @@
+.header {
+  width: 100%;
+  flex: 0 0 300px;
+  background-image: url(./../../../public/images/bg-desktop-light.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media (max-width: 590px) {
+    flex: 0 0 200px;
+  }
+}
+
+.lightThemeHeader {
+  background-image: url(./../../../public/images/bg-desktop-light.jpg);
+}
+
+.darkThemeHeader {
+  background-image: url(./../../../public/images/bg-desktop-dark.jpg);
+}
+
+.flexRow {
+  margin-top: 78px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  @media (max-width: 590px) {
+    margin-top: 48px;
+  }
+}
+
+.title {
+  color: #fffffd;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 16px;
+  @media (max-width: 590px) {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 12px;
+  }
+}
+
+.toggleTheme {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: -3px;
+  background-color: inherit;
+  background-image: url(./../../../public/images/icon-moon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media (max-width: 590px) {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.lightThemeToggle {
+  background-image: url(./../../../public/images/icon-moon.svg);
+}
+
+.darkThemeToggle {
+  background-image: url(./../../../public/images/icon-sun.svg);
+}

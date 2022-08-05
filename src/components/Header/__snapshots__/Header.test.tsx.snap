@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render header 1`] = `
+<header
+  className="header lightThemeHeader"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="flexRow"
+    >
+      <h1
+        className="title"
+      >
+        TODO
+      </h1>
+      <button
+        className="toggleTheme lightThemeToggle"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</header>
+`;
